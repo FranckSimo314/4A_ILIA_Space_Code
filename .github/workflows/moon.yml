@@ -9,7 +9,6 @@ jobs:
 
     steps:
       - name: Get Moon weather
-        uses: alesil/actions-curl@v1.2
-        with:
-          curl: wttr.in/Moon
-          
+        run: curl wttr.in/Moon 
+  
+                    
