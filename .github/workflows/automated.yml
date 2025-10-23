@@ -1,0 +1,12 @@
+name: Automated  # Nom de l'action
+
+on:
+  push:  # Déclenche à chaque push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Afficher message
+        run: echo "New push !"
