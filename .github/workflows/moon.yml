@@ -1,0 +1,15 @@
+name: Moon
+
+on:
+  workflow_dispatch:  # Déclenchement manuel
+
+jobs:
+  fetch-moon:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get Moon weather
+        uses: crazy-max/ghaction-curl@v1  # Action du marketplace pour exécuter curl
+        with:
+          args: https://wttr.in/Moon
+
