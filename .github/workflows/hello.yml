@@ -1,0 +1,12 @@
+name: Hello PR
+
+on:
+  pull_request:  # Déclenchement sur chaque PR
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello PR
+        run: echo "Hello Pull Request !"
