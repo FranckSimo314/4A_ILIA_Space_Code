@@ -9,40 +9,7 @@ jobs:
 
     steps:
       - name: Get Moon weather
-        uses: crazy-max/ghaction-curl@v1  # Action du marketplace pour exécuter curl
+        uses: alesil/actions-curl@v1.2
         with:
-          args: https://wttr.in/Moon
-
-
-           # You may pin to the exact commit or the version.
-  # uses: indiesdev/curl@5f733a4ab67799ec174b9b9b3f8d78100ae084e8
-  uses: indiesdev/curl@v1.1
-  with:
-    # The target url
-    url: # optional
-    # The request method, basically one of GET, POST, PUT, PATCH
-    method: # optional, default is GET
-    # List of status codes to be accepted, else it is considerred to be failed
-    accept: # optional, default is 200201204
-    # Headers object
-    headers: # optional
-    # Params object
-    params: # optional
-    # Body object
-    body: # optional
-    # timeout (millisec)
-    timeout: # optional, default is 1000
-    # Basic authentication token, format =>  username:password as base64
-    basic-auth-token: # optional
-    # Bearer Token
-    bearer-token: # optional
-    # Proxy host, format =>  host:port
-    proxy-url: # optional
-    # Proxy authentication token, format =>  username:password as base64
-    proxy-auth-token: # optional
-    # Should log the response
-    log-response: # optional, default is false
-    # retries number
-    retries: # optional, default is 1
-    # custom config
-    custom-config: # optional
+          curl: wttr.in/Moon
+          
