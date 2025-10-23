@@ -1,0 +1,12 @@
+name: Test Action
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Message test
+        run: echo "Test de l'action !"
