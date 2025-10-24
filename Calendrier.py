@@ -17,4 +17,11 @@ def creer_evenement(T1: float, t: float, n: str):
     evenements.append(evenement)
     return evenement
 
+def evenements_chronologiques():
+    """
+    Retourne la liste de tous les événements triés dans l’ordre chronologique,
+    c’est-à-dire selon T1 + t.
+    """
+    return sorted(evenements, key=lambda e: e[0] + e[1])
+
 
