@@ -24,4 +24,13 @@ def evenements_chronologiques():
     """
     return sorted(evenements, key=lambda e: e[0] + e[1])
 
+def premier_evenement():
+    """
+    Retourne le nom du premier évènement dans la liste chronologique.
+    Si la liste est vide, retourne None.
+    """
+    if not evenements:
+        return None
+    triés = evenements_chronologiques()
+    return triés[0][2]  # le nom de l'évènement
 
