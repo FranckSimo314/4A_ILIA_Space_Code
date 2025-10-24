@@ -34,3 +34,18 @@ def premier_evenement():
     triés = evenements_chronologiques()
     return triés[0][2]  # le nom de l'évènement
 
+def prochain_evenement():
+    """
+    Retourne le nom du prochain évènement à venir
+    par rapport au temps actuel.
+    Si aucun évènement futur n’existe, retourne None.
+    """
+    now = time.time()
+    triés = evenements_chronologiques()
+
+    for e in triés:
+        T1, t, n = e
+        if T1 + t > now:
+            return n  # nom du premier évènement futur
+
+    return None
