@@ -16,3 +16,10 @@ def test_evenements_chronologiques():
     triés = evenements_chronologiques()
     assert triés[0][2] == "A"
     assert triés[1][2] == "B"
+    
+def test_premier_evenement():
+    evenements.clear()
+    T1 = time.time()
+    creer_evenement(T1, 5, "Premier")
+    creer_evenement(T1, 10, "Deuxième")
+    assert premier_evenement() == "Premier"
