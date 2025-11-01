@@ -8,5 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello PR
-        run: echo "Hello Pull Request !"
+      - name: Acceder au code
+        uses: actions/checkout@v3
+      - name: Installer python
+        uses: actions/setup-python@v4
+        with:
+         python-version: '3.x'
+      - name: Executer le fichier 
+        run: python main.py
